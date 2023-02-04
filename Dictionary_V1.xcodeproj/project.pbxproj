@@ -10,6 +10,12 @@
 		AF039191298E0E4A00AF4DF6 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = AF039190298E0E4A00AF4DF6 /* data.json */; };
 		AF039193298E121100AF4DF6 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF039192298E121100AF4DF6 /* Dictionary.swift */; };
 		AF039196298E13FA00AF4DF6 /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF039195298E13FA00AF4DF6 /* DictionaryView.swift */; };
+		AFCC3731298EC54B00557281 /* LanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC3730298EC54B00557281 /* LanguagesView.swift */; };
+		AFCC3733298EC56100557281 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC3732298EC56100557281 /* SearchView.swift */; };
+		AFCC3735298EC57100557281 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC3734298EC57100557281 /* FavoriteView.swift */; };
+		AFCC3737298EC58200557281 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC3736298EC58200557281 /* HelpView.swift */; };
+		AFCC3739298EC59200557281 /* FlashcardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC3738298EC59200557281 /* FlashcardsView.swift */; };
+		AFCC373B298ECD5C00557281 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC373A298ECD5C00557281 /* LanguageView.swift */; };
 		AFD36B53298E055500365B5E /* Dictionary_V1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD36B52298E055500365B5E /* Dictionary_V1App.swift */; };
 		AFD36B55298E055500365B5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD36B54298E055500365B5E /* ContentView.swift */; };
 		AFD36B57298E055900365B5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFD36B56298E055900365B5E /* Assets.xcassets */; };
@@ -20,6 +26,12 @@
 		AF039190298E0E4A00AF4DF6 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		AF039192298E121100AF4DF6 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		AF039195298E13FA00AF4DF6 /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
+		AFCC3730298EC54B00557281 /* LanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesView.swift; sourceTree = "<group>"; };
+		AFCC3732298EC56100557281 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		AFCC3734298EC57100557281 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		AFCC3736298EC58200557281 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		AFCC3738298EC59200557281 /* FlashcardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsView.swift; sourceTree = "<group>"; };
+		AFCC373A298ECD5C00557281 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		AFD36B4F298E055500365B5E /* Dictionary_V1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictionary_V1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD36B52298E055500365B5E /* Dictionary_V1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary_V1App.swift; sourceTree = "<group>"; };
 		AFD36B54298E055500365B5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +78,12 @@
 			isa = PBXGroup;
 			children = (
 				AFD36B54298E055500365B5E /* ContentView.swift */,
+				AFCC3730298EC54B00557281 /* LanguagesView.swift */,
+				AFCC3732298EC56100557281 /* SearchView.swift */,
+				AFCC3734298EC57100557281 /* FavoriteView.swift */,
+				AFCC3736298EC58200557281 /* HelpView.swift */,
+				AFCC3738298EC59200557281 /* FlashcardsView.swift */,
+				AFCC373A298ECD5C00557281 /* LanguageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,9 +197,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFCC3739298EC59200557281 /* FlashcardsView.swift in Sources */,
 				AF039196298E13FA00AF4DF6 /* DictionaryView.swift in Sources */,
 				AFD36B55298E055500365B5E /* ContentView.swift in Sources */,
+				AFCC3735298EC57100557281 /* FavoriteView.swift in Sources */,
 				AFD36B53298E055500365B5E /* Dictionary_V1App.swift in Sources */,
+				AFCC3731298EC54B00557281 /* LanguagesView.swift in Sources */,
+				AFCC3737298EC58200557281 /* HelpView.swift in Sources */,
+				AFCC3733298EC56100557281 /* SearchView.swift in Sources */,
+				AFCC373B298ECD5C00557281 /* LanguageView.swift in Sources */,
 				AF039193298E121100AF4DF6 /* Dictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
