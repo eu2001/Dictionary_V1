@@ -1,0 +1,48 @@
+[
+    {
+    "id":1,
+    "chapter":1,
+    "nameEng":"Good Morning",
+    "audioEng":"wwww.youtube.com",
+    "translitEng":"Good Morning",
+   "namePort":"Bom dia",
+    "translitPor":"bong jee-uh",
+    "audioPor":"wwww.facebook.com",
+    "nameEsp":"Buenos dias",
+    "translitEsp":"boo-e-nos dee-ahs",
+    "audioEsp":"wwww.instagram.com",
+    "nameIta":"Buongiorno",
+    "translitIta":"boo-ong-jee-ohr-noh",
+    "audioIta":"wwww.globo.com",
+    "nameGer":"Guten Morgen",
+    "translitGer":"goo-t'en mohr-g'en",
+    "audioGer":"www.cnn.com",
+    "nameFre":"Bonjour",
+    "translitFre":"bong-joor",
+    "audioFre":"www.uol.com.br"
+    
+},
+    {
+    "id":2,
+    "chapter":2,
+    "nameEng":"Airplane",
+    "audioEng":"wwww.youtube.com",
+    "translitEng":"Air-plai-ne",
+   "namePort":"Aviao",
+    "translitPor":"uh-vee-awn",
+    "audioPor":"wwww.facebook.com",
+    "nameEsp":"Avion",
+    "translitEsp":"Ah-bee-on",
+    "audioEsp":"wwww.instagram.com",
+    "nameIta":"Aero",
+    "translitIta":"Ah-eh-r'oh",
+    "audioIta":"wwww.globo.com",
+    "nameGer":"Flugzeug",
+    "translitGer":"flook'-ts'oyk",
+    "audioGer":"www.cnn.com",
+    "nameFre":"Avion",
+    "translitFre":"ah-vee-on",
+    "audioFre":"www.uol.com.br"
+    
+}
+]
