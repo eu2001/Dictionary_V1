@@ -10,7 +10,7 @@ import SwiftUI
 struct HelpView: View {
     var body: some View {
         ScrollView{
-            VStack(spacing:20){
+            VStack(alignment: .leading, spacing: 20.0){
                 Text("Help")
                     .font(.title).bold()
                 
