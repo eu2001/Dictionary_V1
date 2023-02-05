@@ -19,9 +19,9 @@ struct FlashcardsView: View {
         {
             Text("Flascards").font(.title).bold().padding(.bottom, 40.0)
             
-            ScrollView{ VStack(spacing:0){
+            ScrollView{ VStack(alignment: .leading, spacing:0){
                 Text("Select the Language to Practice:")
-                    .font(.title3)
+                    .font(.title2)
                     .multilineTextAlignment(.leading)
             Picker("Cards", selection: $pickerIndex)
          {   Text("Spanish").tag("ESP")
@@ -33,9 +33,9 @@ struct FlashcardsView: View {
          }.pickerStyle(WheelPickerStyle())
         }
                 Spacer()
-                VStack(spacing:0){
+                VStack(alignment: .leading, spacing:0){
                     Text("Select the Subject to Practice:")
-                        .font(.title3)
+                        .font(.title2)
                         .multilineTextAlignment(.leading)
                 Picker("Cards", selection: $pickerIndexChap
                 )
@@ -48,14 +48,16 @@ struct FlashcardsView: View {
              }.pickerStyle(WheelPickerStyle())
             }
                 Spacer()
-                Button("Start"){}
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                    .background(.blue)
-                    .foregroundColor(.white).cornerRadius(5)
-               
+                Button("Start"){}.foregroundColor(.white).frame(minWidth: 0, maxWidth: 200)
+                        .padding(.all,20).font(.title2)
+                        .foregroundColor(.white)
+                        .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue]), startPoint: .leading, endPoint: .trailing)).cornerRadius(10)
+                        
+               Spacer()
         
             }}
-        .padding(.horizontal)
+        .padding(.horizontal, 20.0)
+        
         
     }}
 

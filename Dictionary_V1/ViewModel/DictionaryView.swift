@@ -6,39 +6,59 @@
 //
 
 import Foundation
-class ViewModel : ObservableObject {
+class BookModel : ObservableObject {
     
     @Published var books = [Book]()
-    
-    init() {
-        self.books = getLocalJson()
-    }
-    
-    /// Retrieve all record data form a local JSON file with name `fileName` and extension `fileExtension`..
-    func getLocalJson(_ fileName: String = "data", fileExtension: String = "json") -> [Book] {
-        
-        var books = [Book]()
-        
-        // Get link to data file
-        let url = Bundle.main.url(forResource: fileName, withExtension: fileExtension)
-        
-        guard url != nil else {
-            print("Could not retrieve category data: \(fileName).\(fileExtension) not found.")
-            return books
-        }
+ init() {
             
-        do {
-            // Decode the data and return it
-            let data = try Data(contentsOf: url!)
-            books = try JSONDecoder().decode([Book].self, from: data)
-            return books
+            // Get the path to the json file within the app bundle
+            let pathString = Bundle.main.path(forResource: "data", ofType: "json")
             
-        } catch {
-            print("Error retrieving category data: \(error.localizedDescription)")
+            if let path = pathString {
+                
+                // Create a url object
+                let url = URL(fileURLWithPath: path)
+                
+                // Error handling
+                do {
+                    // Put the code that potentially throws an error
+                    
+                    // Create a data object with the data at the url
+                    let data = try Data(contentsOf: url)
+                    
+                    // Parse the data
+                    let decoder = JSONDecoder()
+                    
+                    do {
+                        let bookData = try decoder.decode([Book].self, from: data)
+                        
+                        // Set unique IDs for each instance
+                 //       for r in bookData {
+                            
+                            // Set a unique ID for each recipe in the recipeData array
+                   //         r.id = UUID()
+                  //      }
+                        
+                        // Assign the data to the published property
+                        self.books = bookData
+                    }
+                    catch {
+                        // Log Couldn't decode json
+                        print(error)
+                    }
+                    
+                }
+                catch {
+                    // Execution will come here if an error is thrown
+                    // Handle the error
+                    print(error)
+                }
+                
+                
+                
+            }
+            
         }
-        
-        return books
-    }
     
    /* /// Update the specified book's rating. Does nothing if `forId` is invalid.
     func updateRating(forId: Int, rating: Int) {
@@ -56,7 +76,7 @@ class ViewModel : ObservableObject {
     
     /// Update the specified book's current page. Does nothing if `forId` is invalid.
     func updatePage(forId: Int, page: Int) {
-        if let index = books.firstIndex(where: { $0.id == forId }) {
+     b   if let index = books.firstIndex(where: { $0.id == forId }) {
             books[index].currentPage = page
         }
     }
