@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchView: View {
     var body: some View {
-        VStack(alignment: .leading, spacing:0){
+        VStack(alignment: .center, spacing:0){
              Text("Search") .font(.title).bold()
         Spacer()
             VStack(alignment: .center, spacing:25){

@@ -9,18 +9,22 @@ import SwiftUI
 
 struct FavoriteView: View {
     @ObservedObject var model = BookModel()
+   @State var favOn = true
     //var model = Book()
     var body: some View {
         //   var favorits = model.fav
         
        // ScrollView {
-        VStack(alignment: .leading, spacing:20){
+        VStack(alignment: .center, spacing:20){
                 
                Text("Favorites") .font(.title).bold()
               
             VStack(alignment: .leading, spacing:0) {
     List(model.books) { r in
-        HStack{Image(systemName: "star.fill")
+        ZStack{
+            Rectangle().background(.white).foregroundColor(.white).frame(minWidth: 0,  maxWidth: 300, minHeight: 0,  alignment: .center).cornerRadius(15).shadow(color: .gray, radius: 5, x: 5, y: 5)
+            VStack(alignment: .leading,spacing:2){
+                HStack{Image(systemName: "star.fill").foregroundColor(.yellow)
         Text(r.nameEng)
             .fontWeight(.bold)}
         HStack{Text("SPA:")
@@ -43,14 +47,26 @@ struct FavoriteView: View {
             Text(r.nameIta)
             Image(systemName: "speaker.fill")
         }
-        Spacer()
+                HStack{Text("HEB:")
+            Text(r.nameEng)
+            Image(systemName: "speaker.fill")
+        }
+                HStack{Text("ASL:")
+            Text(r.nameEng)
+            Image(systemName: "play.fill")
+        }
+                Spacer()
+            }
+       
+        }
         
         
          
     
  
 }
-}
+            }
+            .padding(.horizontal)
         }
         .padding(.horizontal)
         }

@@ -15,7 +15,7 @@ struct FlashcardsView: View {
     @State var pickerIndex = "ESP"
     @State var pickerIndexChap = "AIR"
     var body: some View {
-        VStack(alignment: .leading, spacing:20)
+        VStack(alignment: .center, spacing:20)
         {
             Text("Flascards").font(.title).bold().padding(.bottom, 40.0)
             
@@ -30,6 +30,7 @@ struct FlashcardsView: View {
               Text("Portuguese").tag("POR")
              Text("Italian").tag("ITA")
              Text("Hebrew").tag("HEB")
+             Text("ASL").tag("ASL")
          }.pickerStyle(WheelPickerStyle())
         }
                 Spacer()
