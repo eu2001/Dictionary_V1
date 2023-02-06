@@ -29,4 +29,5 @@ struct Book : Decodable, Identifiable {
             var nameFre =  "Bonjour"
             var translitFre = "bong-joor"
             var audioFre = "www.uol.com.br"
+            var isFavourite = true
 }

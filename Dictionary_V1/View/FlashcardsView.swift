@@ -14,10 +14,11 @@ struct FlashcardsView: View {
     
     @State var pickerIndex = "ESP"
     @State var pickerIndexChap = "AIR"
+    @State private var showFlashIntroView = false
     var body: some View {
         VStack(alignment: .center, spacing:20)
         {
-            Text("Flascards").font(.title).bold().padding(.bottom, 40.0)
+            Text("Flashcards").font(.title).bold().padding(.bottom, 40.0)
             
             ScrollView{ VStack(alignment: .leading, spacing:0){
                 Text("Select the Language to Practice:")
@@ -49,10 +50,19 @@ struct FlashcardsView: View {
              }.pickerStyle(WheelPickerStyle())
             }
                 Spacer()
-                Button("Start"){}.foregroundColor(.white).frame(minWidth: 0, maxWidth: 200)
-                        .padding(.all,20).font(.title2)
-                        .foregroundColor(.white)
-                        .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue]), startPoint: .leading, endPoint: .trailing)).cornerRadius(10)
+                
+                Button(action: { showFlashIntroView = true }) {
+                    Text("Start").foregroundColor(.white)
+                        .fontWeight(.bold)
+                        .frame(minWidth: 0, maxWidth: 200)
+                        .padding(.all,20)
+                        .foregroundColor(.blue)
+                        .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue]), startPoint: .leading, endPoint: .trailing))
+                        .cornerRadius(10)
+                }
+                NavigationLink("", destination:  FlashCardsGameView(), isActive: $showFlashIntroView)
+                
+               
                         
                Spacer()
         
